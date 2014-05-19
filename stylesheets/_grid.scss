@@ -1,0 +1,62 @@
+// flexi-grid framework
+@import "flexi-grid/mixin";
+
+// box sizing
+*{
+    @include box-sizing(border-box);
+}
+
+// clear the float
+.clear{
+    @extend %clear;
+}
+
+// container
+.container{
+    @include container(30); // padding left & right 15px
+}
+
+// wrapper
+.wrapper{
+    @include wrapper(30); // margin left & right (-15px))
+}
+
+// columns
+@include columns(col,12);
+
+// tablet media
+@media screen and (min-width:768px){
+    %float{
+        float: left;
+    }
+    @include grids(col,12);
+    @include grids(offset,12);
+    @include grids(push,12);
+    @include grids(pull,12);
+}
+
+
+// desktop media
+@media screen and (min-width:992px){
+     %float{
+        float: left;
+    }
+    @include grids(col,12);
+    @include grids(offset,12);
+    @include grids(push,12);
+    @include grids(pull,12);
+}
+
+// large media
+@media screen and (min-width:1200px){
+     %float{
+        float: left;
+    }
+    @include grids(col,12);
+    @include grids(offset,12);
+    @include grids(push,12);
+    @include grids(pull,12);
+}
+
+// add the float for all media
+@include float(col,12);  // this had been added because the media not allowed @extend insdie 
